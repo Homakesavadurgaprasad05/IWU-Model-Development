@@ -2,44 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>LLM Training Artifact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Training Large Language Models</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
+      margin: 40px;
       background-color: #f4f6f9;
       color: #333;
       line-height: 1.6;
     }
 
-    header {
-      background: linear-gradient(135deg, #1f4e79, #2f75b5);
-      color: white;
+    h1 {
       text-align: center;
-      padding: 50px 20px;
-    }
-
-    .container {
-      width: 85%;
-      max-width: 1100px;
-      margin: 40px auto;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h2, h3 {
       color: #1f4e79;
     }
 
+    h2 {
+      color: #2f75b5;
+      margin-top: 40px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    .highlight {
+      background-color: #eef5ff;
+      padding: 15px;
+      border-left: 5px solid #2f75b5;
+      margin-top: 20px;
+    }
+
+    .back-btn,
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -51,100 +50,118 @@
       font-weight: bold;
     }
 
+    .back-btn {
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    .back-btn:hover,
     .btn:hover {
       background-color: #1f4e79;
     }
 
-    iframe {
-      width: 100%;
-      height: 800px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-top: 20px;
-    }
-
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #1f4e79;
-      color: white;
       margin-top: 40px;
+      color: gray;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Training Large Language Models</h1>
-    <p>Process and Resource Costs of Generative AI Systems</p>
-  </header>
+<div class="container">
 
-  <div class="container">
+  <a href="index.html" class="back-btn">Back to Portfolio</a>
 
-    <div class="card">
-      <h2>Artifact Overview</h2>
-      <p>
-        This artifact illustrates the training lifecycle of modern Large Language
-        Models (LLMs), including GPT-4, Claude, Gemini, LLaMA, and Grok. The
-        presentation highlights the major stages of development, including data
-        collection, preprocessing, tokenization, pre-training, fine-tuning,
-        evaluation, and deployment.
-      </p>
+  <h1>Training Large Language Models (LLMs)</h1>
 
-      <p>
-        It also demonstrates the significant resources required to train these
-        models, including massive datasets, GPU/TPU clusters, energy consumption,
-        cloud infrastructure, engineering effort, and months of training time.
-      </p>
-    </div>
+  <h2>Introduction</h2>
 
-    <div class="card">
-      <h2>Key Concepts Covered</h2>
-      <ul>
-        <li>Data collection and preparation for LLM training</li>
-        <li>Tokenization and model architecture design</li>
-        <li>Pre-training and fine-tuning processes</li>
-        <li>Evaluation, alignment, and safety testing</li>
-        <li>Deployment and continuous improvement</li>
-        <li>Compute, energy, time, and financial resource costs</li>
-      </ul>
-    </div>
+  <p>
+    Large Language Models (LLMs) such as GPT-4, Claude, Gemini, LLaMA, and Grok
+    are advanced artificial intelligence systems trained on massive datasets to
+    understand and generate human-like language.
+  </p>
 
-    <div class="card">
-      <h2>Design Rationale</h2>
-      <p>
-        The artifact uses flowcharts, icons, model examples, and visual comparisons
-        to make complex AI infrastructure concepts easier to understand. The design
-        is intended to be clear for both technical and non-technical audiences while
-        showing the high level of investment required to develop large-scale
-        generative AI systems.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Presentation Artifact</h2>
-      <p>
-        View or download the presentation below.
-      </p>
-
-      <!-- Rename your PDF file to this exact name and upload it to GitHub -->
-      <iframe src="Training Process and Resource Costs of Generative AI.pptx"></iframe>
-
-      <br />
-
-      <a href="Training Process and Resource Costs of Generative AI.pptx" class="btn" target="_blank">
-        Download Presentation
-      </a>
-    </div>
-
-    <a href="index.html" class="btn">Back to Portfolio</a>
-
+  <div class="highlight">
+    Training modern LLMs requires enormous investments in data collection,
+    computational infrastructure, energy consumption, engineering expertise,
+    and training time.
   </div>
 
-  <footer>
-    <p>Homakesavadurgaprasad - Professional Portfolio</p>
-  </footer>
+  <h2>Key Stages of LLM Training</h2>
+
+  <ul>
+    <li><strong>Data Collection</strong> – Gathering large datasets from books, websites, articles, and public sources.</li>
+    <li><strong>Data Preprocessing</strong> – Cleaning, filtering, and preparing data for training.</li>
+    <li><strong>Tokenization</strong> – Converting text into machine-readable tokens.</li>
+    <li><strong>Pre-Training</strong> – Training the model on billions of tokens using GPU/TPU clusters.</li>
+    <li><strong>Fine-Tuning</strong> – Improving model performance for specific tasks.</li>
+    <li><strong>Evaluation & Safety Testing</strong> – Measuring accuracy, reliability, and safety.</li>
+    <li><strong>Deployment</strong> – Making the model available for users and applications.</li>
+  </ul>
+
+  <h2>Resources Required</h2>
+
+  <div class="highlight">
+    <ul>
+      <li>Massive datasets containing trillions of words</li>
+      <li>Thousands of GPUs and TPUs</li>
+      <li>Large-scale cloud infrastructure</li>
+      <li>Significant electricity consumption</li>
+      <li>Months of training time</li>
+      <li>Millions of dollars in infrastructure costs</li>
+    </ul>
+  </div>
+
+  <h2>Examples of Leading LLMs</h2>
+
+  <ul>
+    <li><strong>GPT-4</strong> – OpenAI</li>
+    <li><strong>Claude</strong> – Anthropic</li>
+    <li><strong>Gemini</strong> – Google</li>
+    <li><strong>LLaMA</strong> – Meta</li>
+    <li><strong>Grok</strong> – xAI</li>
+  </ul>
+
+  <h2>Presentation Artifact</h2>
+
+  <p>
+    Click below to view or download the complete presentation.
+  </p>
+
+  <a href="LLM_Training_Process_and_Costs.pdf"
+     class="btn"
+     target="_blank">
+     View Presentation
+  </a>
+
+  <h2>Summary</h2>
+
+  <div class="highlight">
+    This project explores the complete lifecycle of training large language models,
+    the infrastructure required, and the significant resource costs associated with
+    building modern generative AI systems.
+  </div>
+
+  <h2>Reflection</h2>
+
+  <div class="highlight">
+    Working on this artifact improved my understanding of how modern generative AI
+    models are developed. I learned about the importance of data quality,
+    computational resources, energy consumption, and model optimization in creating
+    large-scale AI systems. This project strengthened my knowledge of AI
+    infrastructure and the practical challenges involved in training advanced
+    language models.
+  </div>
+
+</div>
+
+<footer>
+  Training Large Language Models – Portfolio Artifact
+</footer>
 
 </body>
 </html>
