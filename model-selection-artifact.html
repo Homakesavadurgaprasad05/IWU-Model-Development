@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pre-Trained Model Selection Decision Matrix</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1f4e79, #2f75b5);
+      color: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    header h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .container {
+      width: 88%;
+      max-width: 1150px;
+      margin: 40px auto;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #1f4e79;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #2f75b5;
+      margin-top: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    th {
+      background-color: #1f4e79;
+      color: white;
+      padding: 14px;
+      text-align: left;
+    }
+
+    td {
+      padding: 13px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f7fbff;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .high {
+      background-color: #dff3e3;
+      color: #1b6b2a;
+    }
+
+    .medium {
+      background-color: #fff3cd;
+      color: #8a6d00;
+    }
+
+    .low {
+      background-color: #f8d7da;
+      color: #842029;
+    }
+
+    .fast {
+      background-color: #dff3e3;
+      color: #1b6b2a;
+    }
+
+    .slow {
+      background-color: #f8d7da;
+      color: #842029;
+    }
+
+    .model-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .model-card {
+      background-color: #eef5ff;
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 5px solid #2f75b5;
+    }
+
+    .model-card h3 {
+      margin-top: 0;
+      color: #1f4e79;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      margin-right: 10px;
+      padding: 12px 24px;
+      background-color: #2f75b5;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #1f4e79;
+    }
+
+    .note {
+      background-color: #eef5ff;
+      border-left: 5px solid #2f75b5;
+      padding: 18px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1f4e79;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 9px;
+      }
+
+      header h1 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Pre-Trained Model Selection Decision Matrix</h1>
+    <p>Balancing Model Size, Accuracy, Speed, and Explainability Across AI Domains</p>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Artifact Overview</h2>
+      <p>
+        This portfolio artifact compares popular pre-trained AI models across
+        Natural Language Processing, Generative AI, Computer Vision, and Tabular
+        Data domains. The purpose of this artifact is to support informed model
+        selection by analyzing trade-offs between model size, accuracy, inference
+        speed, explainability, and practical deployment requirements.
+      </p>
+
+      <p>
+        The selected models include GPT-4, BERT Base, MobileNetV3,
+        EfficientNet-B0, XGBoost, and Random Forest. These models were chosen
+        because they represent different levels of performance, complexity,
+        interpretability, and deployment suitability.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Decision Matrix</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Model</th>
+            <th>Model Size</th>
+            <th>Accuracy</th>
+            <th>Speed</th>
+            <th>Explainability</th>
+            <th>Recommended Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>NLP / Generative AI</td>
+            <td>GPT-4</td>
+            <td>Very Large</td>
+            <td><span class="badge high">Very High</span></td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge low">Low</span></td>
+            <td>Content generation, AI assistants, summarization</td>
+          </tr>
+          <tr>
+            <td>NLP</td>
+            <td>BERT Base</td>
+            <td>Medium</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge fast">Fast</span></td>
+            <td><span class="badge medium">Medium</span></td>
+            <td>Text classification, sentiment analysis, information extraction</td>
+          </tr>
+          <tr>
+            <td>Computer Vision</td>
+            <td>MobileNetV3</td>
+            <td>Small</td>
+            <td><span class="badge medium">Medium-High</span></td>
+            <td><span class="badge fast">Very Fast</span></td>
+            <td><span class="badge medium">Medium</span></td>
+            <td>Mobile apps, edge AI, real-time vision tasks</td>
+          </tr>
+          <tr>
+            <td>Computer Vision</td>
+            <td>EfficientNet-B0</td>
+            <td>Medium</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge medium">Medium</span></td>
+            <td>Image classification, medical imaging, cloud vision systems</td>
+          </tr>
+          <tr>
+            <td>Tabular Data</td>
+            <td>XGBoost</td>
+            <td>Small-Medium</td>
+            <td><span class="badge high">Very High</span></td>
+            <td><span class="badge fast">Fast</span></td>
+            <td><span class="badge high">High</span></td>
+            <td>Fraud detection, churn prediction, business analytics</td>
+          </tr>
+          <tr>
+            <td>Tabular Data</td>
+            <td>Random Forest</td>
+            <td>Medium</td>
+            <td><span class="badge high">High</span></td>
+            <td><span class="badge medium">Medium</span></td>
+            <td><span class="badge high">Very High</span></td>
+            <td>Explainable prediction, healthcare, finance, risk analysis</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Visual Rating Comparison</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Size</th>
+            <th>Accuracy</th>
+            <th>Speed</th>
+            <th>Explainability</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GPT-4</td>
+            <td>★★★★★</td>
+            <td>★★★★★</td>
+            <td>★★★☆☆</td>
+            <td>★★☆☆☆</td>
+          </tr>
+          <tr>
+            <td>BERT Base</td>
+            <td>★★★☆☆</td>
+            <td>★★★★☆</td>
+            <td>★★★★☆</td>
+            <td>★★★☆☆</td>
+          </tr>
+          <tr>
+            <td>MobileNetV3</td>
+            <td>★★☆☆☆</td>
+            <td>★★★☆☆</td>
+            <td>★★★★★</td>
+            <td>★★★☆☆</td>
+          </tr>
+          <tr>
+            <td>EfficientNet-B0</td>
+            <td>★★★☆☆</td>
+            <td>★★★★☆</td>
+            <td>★★★☆☆</td>
+            <td>★★★☆☆</td>
+          </tr>
+          <tr>
+            <td>XGBoost</td>
+            <td>★★☆☆☆</td>
+            <td>★★★★★</td>
+            <td>★★★★☆</td>
+            <td>★★★★★</td>
+          </tr>
+          <tr>
+            <td>Random Forest</td>
+            <td>★★★☆☆</td>
+            <td>★★★★☆</td>
+            <td>★★★☆☆</td>
+            <td>★★★★★</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="note">
+        <strong>Note:</strong> A higher size rating means the model requires more
+        computational resources. A higher explainability rating means the model is
+        easier to interpret and justify in business or regulated environments.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Model Analysis</h2>
+
+      <div class="model-grid">
+
+        <div class="model-card">
+          <h3>GPT-4</h3>
+          <p>
+            GPT-4 provides strong natural language reasoning and generation
+            capabilities. It is best suited for advanced AI assistants, content
+            generation, summarization, and enterprise knowledge support. However,
+            it has lower explainability and higher infrastructure requirements.
+          </p>
+        </div>
+
+        <div class="model-card">
+          <h3>BERT Base</h3>
+          <p>
+            BERT Base is effective for NLP classification tasks such as sentiment
+            analysis, information extraction, and question answering. It offers a
+            strong balance between accuracy, speed, and model size.
+          </p>
+        </div>
+
+        <div class="model-card">
+          <h3>MobileNetV3</h3>
+          <p>
+            MobileNetV3 is designed for mobile and edge environments. It provides
+            fast inference with a small memory footprint, making it useful for
+            real-time image applications and embedded AI systems.
+          </p>
+        </div>
+
+        <div class="model-card">
+          <h3>EfficientNet-B0</h3>
+          <p>
+            EfficientNet-B0 balances image classification accuracy and efficiency.
+            It is useful when image accuracy is more important than extremely fast
+            edge deployment.
+          </p>
+        </div>
+
+        <div class="model-card">
+          <h3>XGBoost</h3>
+          <p>
+            XGBoost is highly effective for structured tabular data. It provides
+            strong accuracy, fast inference, and good explainability through
+            feature importance and SHAP analysis.
+          </p>
+        </div>
+
+        <div class="model-card">
+          <h3>Random Forest</h3>
+          <p>
+            Random Forest offers strong interpretability and stable performance.
+            It is especially useful in finance, healthcare, and compliance-driven
+            environments where model transparency is important.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Recommendations</h2>
+
+      <ul>
+        <li><strong>Choose GPT-4</strong> for advanced text generation, summarization, and AI assistant use cases.</li>
+        <li><strong>Choose BERT Base</strong> for NLP classification, sentiment analysis, and information extraction.</li>
+        <li><strong>Choose MobileNetV3</strong> for mobile, edge, and real-time computer vision applications.</li>
+        <li><strong>Choose EfficientNet-B0</strong> when image classification accuracy is more important than inference speed.</li>
+        <li><strong>Choose XGBoost</strong> for high-performing tabular business analytics and predictive modeling.</li>
+        <li><strong>Choose Random Forest</strong> when explainability and transparency are major project requirements.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Conclusion</h2>
+      <p>
+        This decision matrix shows that model selection depends on the use case,
+        infrastructure constraints, performance expectations, and explainability
+        needs. GPT-4 offers advanced NLP capability but has high resource
+        requirements and lower interpretability. BERT provides a balanced option
+        for NLP classification. MobileNetV3 is best for fast edge deployment, while
+        EfficientNet-B0 offers stronger vision accuracy. For tabular data, XGBoost
+        provides high accuracy and Random Forest provides strong explainability.
+        Therefore, organizations should select models based on business objectives,
+        deployment environment, data type, and responsible AI requirements.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Download Artifact</h2>
+      <p>
+        The PowerPoint/PDF version of this portfolio artifact can be downloaded
+        using the link below.
+      </p>
+
+      <a href="Pre-Trained Model Comparison.pptx" class="btn">
+        Download PowerPoint
+      </a>
+
+      <a href="index.html" class="btn">
+        Back to Portfolio
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Homakesavadurgaprasad - Professional Portfolio</p>
+  </footer>
+
+</body>
+</html>
